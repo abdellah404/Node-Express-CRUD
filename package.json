@@ -1,13 +1,13 @@
 {
   "dependencies": {
     "express": "^4.21.2",
+    "express-session": "^1.18.1",
     "jsonwebtoken": "^9.0.2",
     "nodemon": "^2.0.19"
-
-    
   },
-  "scripts" : {
+  "scripts": {
     "start": "nodemon index.js",
-    "start_auth" : "nodemon index.js"
+    "start_auth": "nodemon index_withauth.js",
+    "serve": "node index.js"
   }
 }

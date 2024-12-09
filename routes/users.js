@@ -34,7 +34,7 @@ router.get("/:email", (req, res) => {
 router.post("/", (req, res) => {
   const user = req.body;
   users.push(user);
-  res.send("user with name " + user.firstName + " has been added!!!");
+  res.send("user with name " + req.query.firstName + " has been added!!!");
 });
 
 router.put("/:email", (req, res) => {
@@ -73,5 +73,8 @@ router.delete("/:email", (req, res) => {
   // Send a success message as the response, indicating the user has been deleted
   res.send(`User with the email ${email} deleted.`);
 });
+
+
+
 
 module.exports = router;
